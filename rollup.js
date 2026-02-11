@@ -4,10 +4,6 @@ import terser from '@rollup/plugin-terser';
 // see below for details on these options
 const inputOptions = {};
 
-inputOptions.esm = {
-    input: "./index.js"
-};
-
 inputOptions.iife = {
     input: "./iife.js"
 };

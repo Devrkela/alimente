@@ -1,6 +1,6 @@
 {
   "name": "alimente",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "keywords": [
     "browser",
@@ -19,8 +19,8 @@
   "license": "MIT",
   "author": "Erkela",
   "type": "module",
-  "main": "dist/alimente-esm.js",
-  "browser": "dist/alimente-esm.js",
+  "main": "dist/alimente-iife.js",
+  "browser": "dist/alimente-iife.js",
   "files": [
     "dist/*"
   ],

@@ -70,11 +70,22 @@ function toCSS(url){
 }
 
 function formatURL(url){
-    return Promise.reject("error")
+    let _url;
+    try{
+        _url = new URL(url);
+    } catch(e){
+        try{
+            _url = new URL(url, window.location);
+        }
+        catch(e){
+            return Promise.reject(e);
+        }
+    }
+    return _url;
 }
 
 function toESM(url){
-    let _url = formatURL();
+    let _url = formatURL(url);
 
     if(_url instanceof Promise){
         return _url;
@@ -183,7 +194,7 @@ var types = {
 
 function alimente$1(url, type){
   if(!type){
-    return types.toESM(url);    
+    return types["esm"](url);    
   }
 
   if(!types[type]) return console.warn("Type is not supported!");

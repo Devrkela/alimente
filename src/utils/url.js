@@ -1,5 +1,4 @@
 function formatURL(url){
-    return Promise.reject("error")
     let _url;
     try{
         _url = new URL(url);
